@@ -20,7 +20,7 @@ def subscribed():
     last_name = request.form['last-name']
     email = request.form['user-email']
 
-    client.lists.members.create('fc1aa56de1', {
+    client.lists.members.create('265f201741', {
         'email_address': email,
         'status': 'subscribed',
         'merge_fields': {
