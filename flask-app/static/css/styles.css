@@ -1,6 +1,22 @@
-@import 'https://fonts.googleapis.com/css?family=Lora:400,400i,700|Raleway:300,600,700,900';
+@import 'https://fonts.googleapis.com/css?family=Lora:400,400i,700|Raleway:300,600,700,900|Comfortaa';
 @import 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
 /* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
+
+
+/* ==========================================================================
+Variables
+========================================================================== */
+
+:root {
+  --accent-color: #64c29e;
+  --default-text-color: #848789;
+  --header-text-color: #353738;
+  --link-color: #282f35;
+  --title-font: 'Comfortaa', serif;
+  --body-font: 'Raleway', sans-serif;
+  --main-logo: url(../img/lotus-1.png);
+}
+
 
 /* ==========================================================================
 HTML5 display definitions
@@ -32,7 +48,11 @@ html { font-size: 100%; /* 1 */
 * elements. */
 html, button, input, select, textarea { font-family: sans-serif; }
 /* * Addresses margins handled incorrectly in IE 6/7. */
-body { margin: 0; font-family: 'Lato', sans-serif; overflow-x: hidden; }
+body {
+  margin: 0;
+  font-family: var(--body-font), sans-serif;
+  overflow-x: hidden;
+}
 html, body { width: auto !important; overflow-x: hidden !important; }
 /* ==========================================================================
 Links
@@ -48,7 +68,11 @@ Typography
 /* * Addresses font sizes and margins set differently in IE 6/7.
 * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5, * and Chrome. */
 
-h1 { font-size: 2em; margin: 0.67em 0; }
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  font-family: var(--title-font);
+}
 h2 { font-size: 1.5em; margin: 0.83em 0; }
 h3 { font-size: 1.17em; margin: 1em 0; }
 h4 { font-size: 1em; margin: 1.33em 0; }
@@ -86,7 +110,7 @@ Lists
 dl, menu, ol, ul { margin: 1em 0; }
 dd { margin: 0 0 0 40px; }
 /* * Addresses paddings set differently in IE 6/7. */
-menu, ol, ul { padding: 0 0 0 40px; }
+menu, ol, ul { padding: 0 0 0 25px; }
 /* * Corrects list images handled incorrectly in IE 7. */
 nav ul, nav ol { list-style: none; list-style-image: none; }
 /* ==========================================================================
@@ -175,18 +199,33 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* ==========================================================================
 Headings
 ========================================================================== */
-h1.chain { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/cog-icon.png) no-repeat top center; padding-top: 75px; }
-h1.header-text { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 32px; font-weight: 600; }
-h2.frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/frame-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
-h2.mech { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/mech-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
-h2.front-frame { text-align: center; text-transform: uppercase; color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/front-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
-h2.twitter-post-username { color: #353738; letter-spacing: 2px; font-size: 18px; font-weight: 600; margin-top: 30px; }
-h2.twitter-post-username span { color: #848789; font-weight: 300; }
-h2.logo-header { text-align: center; color: #848789; letter-spacing: 1px; font-size: 24px; font-weight: 300; background: url(../img/main-logo.png) no-repeat top center; padding-top: 120px; margin: 70px 0 40px 0; font-style: italic; }
-/* ==========================================================================
-User Styles
-========================================================================== */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+h1.chain { text-align: center; text-transform: uppercase; color: var(--header-text-color); letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/cog-icon.png) no-repeat top center; padding-top: 75px; }
+h1.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--header-text-color);
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 400;
+  padding-top: 25px;
+  /*-ms-transform: skewY(-5deg); IE 9 */
+  /*-webkit-transform: skewY(-5deg); Safari */
+  /*transform: skewY(-5deg);*/
+}
+h2.header-text {
+  text-align: center;
+  color: var(--header-text-color);
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: 400;
+}
+h2.frame { text-align: center; text-transform: uppercase; color: var(--header-text-color); letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/frame-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.mech { text-align: center; text-transform: uppercase; color: var(--header-text-color); letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/mech-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.front-frame { text-align: center; text-transform: uppercase; color: var(--header-text-color); letter-spacing: 2px; font-size: 18px; font-weight: 600; background: url(../img/front-icon.png) no-repeat top center; padding-top: 65px; margin-top: 70px; }
+h2.twitter-post-username { color: var(--header-text-color); letter-spacing: 2px; font-size: 18px; font-weight: 600; margin-top: 30px; }
+h2.twitter-post-username span { color: var(--default-text-color); font-weight: 300; }
+h2.logo-header { text-align: center; color: var(--default-text-color); letter-spacing: 1px; font-size: 24px; font-weight: 300; background: url(../img/lotus-1.png) no-repeat top center; padding-top: 120px; margin: 70px 0 40px 0; font-style: italic; }
+
 /* ==========================================================================
 User Styles
 ========================================================================== */
@@ -194,18 +233,21 @@ User Styles
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 .pullcontainer a#pull { display: none; }
-a { color: #282f35; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease; }
-a:hover { color: #64c29e; text-decoration: none; }
-p { text-align: center; font-size: 14px; color: #848789; font-weight: 300; word-spacing: 2px; line-height: 1.8em; margin-top: 25px; }
+a { color: var(--link-color); -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease; }
+a:hover { color: var(--accent-color); text-decoration: none; }
+p { text-align: center; font-size: 14px; color: var(--default-text-color); font-weight: 300; word-spacing: 2px; line-height: 1.8em; margin-top: 25px; }
 p.text-intro { font-size: 18px; }
 
 header{
 	background-image: url(../img/sfbay-header.jpg);
 	height: 50vh;
 	position: relative;
-	min-height: 500px;
+	min-height: 390px;
 }
-header ul { padding-top: 35px; }
+header ul {
+  margin-top: -30px;
+  font-size: 20px;
+}
 header ul li { list-style: none; float: left; text-transform: uppercase; letter-spacing: 2px; }
 header ul li a { display: block; margin: 0 30px; color: #4d4959; }
 
@@ -230,9 +272,13 @@ header ul li a { display: block; margin: 0 30px; color: #4d4959; }
 }
 
 nav { height: 85px; margin-top: 30px; position: relative; }
-.logo-holder { background: url(../img/main-logo.png) no-repeat center center; width: 94px; height: 85px; position: absolute; top: 0; left: 327px; }
+.logo-holder {
+  background: url(../img/lotus-1.png) no-repeat center center;
+  width: 94px; height: 85px;
+  position: absolute; top: 0;
+  left: 332px; }
 .responsive-logo { display: hidden; }
-.r_spacer { margin-right: 180px; }
+.r_spacer { margin-right: 128px; }
 .intro { padding: 20px 0; background-color: #fbfbfb; }
 .section-1 { background: url(../img/left-box-1.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
 .section-2 { background: url(../img/left-box-2.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 600px; position: relative; }
@@ -256,7 +302,7 @@ nav { height: 85px; margin-top: 30px; position: relative; }
   text-align: center;
 }
 .flex-twitter-icon { width: 32px; height: 27px; background: url(../img/twitter-bird.png) no-repeat center center; margin: 0 auto; }
-p.twitter-post { color: #848789; font-size: 24px; font-style: italic; font-weight: 300; margin-bottom: 100px; }
+p.twitter-post { color: var(--default-text-color); font-size: 24px; font-style: italic; font-weight: 300; margin-bottom: 100px; }
 .left-box-1 { width: 50%; float: left; }
 .left-box-2 { width: 50%; float: right; }
 .left-box-btm { width: 100%; }
@@ -269,7 +315,7 @@ p.twitter-post { color: #848789; font-size: 24px; font-style: italic; font-weigh
 .right-box-2 { width: 50%; float: left; }
 .right-box-3 { width: 50%; float: right; }
 .right-box-3 img, .right-box-2 img, .right-box-1 img { width: 100%; }
-.effects { background-color: #282f35; }
+.effects { background-color: var(--link-color); }
 .effects .img { position: relative; }
 .effects .img img { display: block; margin: 0; padding: 0; max-width: 100%; height: auto; }
 .overlay { z-index: 10 }
@@ -280,9 +326,9 @@ a.close-overlay.hidden { display: none }
 #effect .img { overflow: hidden }
 #effect .img.hover .overlay { opacity: 1 }
 #effect .img.hover .overlay a.expand { top: 50%; margin-top: -30px; opacity: 1; }
-.discover { background-color: #282f35; padding: 70px 0; text-align: center; }
+.discover { background-color: var(--link-color); padding: 70px 0; text-align: center; }
 .shop-btn { border: solid 1px #bbb; padding: 15px 50px; color: #fff; text-transform: uppercase; letter-spacing: 3px; font-weight: 400; }
-.shop-btn:hover, .shop-btn:focus { border: solid 1px #64c29e; }
+.shop-btn:hover, .shop-btn:focus { border: solid 1px var(--accent-color); }
 
 .instagram-gallery {
 	display: inline;
@@ -308,9 +354,9 @@ a.close-overlay.hidden { display: none }
 }
 
 .submit-btn {
-  background-color: #64c29e;
+  background-color: var(--accent-color);
   color: #fff;
-  border: solid 1px #64c29e;
+  border: solid 1px var(--accent-color);
   font-weight: 300;
   padding: 25px 50px;
 }
